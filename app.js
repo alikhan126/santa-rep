@@ -2,7 +2,7 @@ require('dotenv').config()
 var express = require('express');
 var app = express();
 const path = require('path');
-const stripe = require("stripe")("your_secret_key");
+const stripe = require("stripe")("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");
 const bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
@@ -68,10 +68,10 @@ app.post("/create-payment-intent", async (req, res) => {
   });
 });
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'santastream',
   auth: {
-    user: 'youremail@gmail.com',
-    pass: 'yourpassword'
+    user: 'info@santastream.com',
+    pass: 'Santa123!'
   }
 });
 
